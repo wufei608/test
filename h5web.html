@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Untitled Document</title>
+</head>
+<body>
+<div onclick="onClick1()" style="width:400px; height:100px; background-color:#099;">直接充值</div>
+<br/><br/>
+<div onclick="onClick2()" style="width:400px; height:100px; background-color:#099;">分享</div>
+<br/><br/>
+<div onclick="onClick3()" style="width:400px; height:100px; background-color:#099;">打开cobe商店分享</div>
+<br/><br/>
+<div onclick="onClick4()" style="width:400px; height:100px; background-color:#099;">奖励100金币</div>
+<br/><br/>
+<div onclick="onClick5()" style="width:400px; height:100px; background-color:#099;">打开订阅页面</div>
+<br/><br/>
+<div onclick="onClick6()" style="width:400px; height:100px; background-color:#099;">联系客服</div>
+<br/><br/>
+<div onclick="onClick7()" style="width:400px; height:100px; background-color:#099;">给特定主播发消息</div>
+<br/><br/>
+<div onclick="onClick8()" style="width:400px; height:100px; background-color:#099;">打开新的网页</div>
+<br/><br/>
+<div onclick="onClick9()" style="width:400px; height:100px; background-color:#099;">打开详情页</div>
+<br/><br/>
+<div onclick="onClick10()" style="width:400px; height:100px; background-color:#099;">给主播打电话</div>
+<br/><br/>
+<div onclick="onBack()" style="width:100px; height:100px; background-color:#099;">返回关闭页面</div>
+<br/><br/>
+<div onclick="locationUrl()" style="width:100px; height:100px; background-color:#099;">重定向去商店页面
+</div>
+<br/><br/>
+<div id="result" style="width:100px; height:100px; background-color:#099;">
+</div>
+<br/><br/>
+<script type="text/javascript">
+function locationUrl(){
+    window.location.href="pitpet://subscription";
+}
+
+function onBack(){
+    window.callback.onBack("pitpet");
+}
+
+function onClick1(){
+    window.callback.onClickDeepLink("pitpet://direct_recharge?productId=pitpet_item_coins_1_id")
+}
+
+function onClick2(){
+    window.callback.onClickDeepLink("pitpet://share?title=This is test&amp;amp;amp;content=https://fsveg.buzzcast.info/christmasRecharge/index.html")
+}
+
+function onClick3(){
+    window.callback.onClickDeepLink("pitpet://open_third_part?uri=cobe://recharge?productId=cobe_item_coins_1_id")
+}
+
+function onClick4(){
+    window.callback.onClickDeepLink("pitpet://reward?count=100")
+}
+
+function onClick5(){
+    window.callback.onClickDeepLink("pitpet://subscription")
+}
+
+function onClick6(){
+    window.callback.onClickDeepLink("pitpet://customer_service")
+}
+
+function onClick7(){
+    window.callback.onClickDeepLink("pitpet://conversation?targetId=24604496&amp;amp;title=Casey&amp;amp;greet=hi , you are lovely")
+}
+
+function onClick8(){
+    window.callback.onClickDeepLink("pitpet://browser?url=https://fsveg.buzzcast.info/christmasRecharge/index.html?token=xxx&amp;title=Christmas%20Recharge%20Bonus")
+}
+
+function onClick9(){
+    window.callback.onClickDeepLink("pitpet://view_anchor_detail?id=24948598")
+}
+
+function onClick10(){
+    window.callback.onClickDeepLink("pitpet://make_call?id=24948598")
+}
+
+function onPayResult(arg){
+    document.getElementById("result").innerHTML=arg
+}
+</script>
+</body>
